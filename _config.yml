@@ -11,7 +11,7 @@ title:            Luis Valle
 tagline:          'Luis technical blog'
 description:      'Android bot @ <a href="http://bizzby.com" target="_blank">BIZZBY</a>.'
 url:              http://hyde.getpoole.com
-baseurl:          http://lgvalle.github.io/hyde/
+baseurl:          http://lgvalle.github.io/
 
 author:
   name:           'Luis G. Valle'
