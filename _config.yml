@@ -10,7 +10,7 @@ relative_permalinks: true
 title:            Luis Valle
 tagline:          'Luis technical blog'
 description:      'Android bot @ <a href="http://bizzby.com" target="_blank">BIZZBY</a>.'
-url:              http://hyde.getpoole.com
+url:              http://lgvalle.github.io/
 baseurl:          http://lgvalle.github.io/
 
 author:
@@ -24,4 +24,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/lgvalle
