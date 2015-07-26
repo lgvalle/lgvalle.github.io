@@ -7,15 +7,16 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+title:            Luis Valle
+tagline:          'Luis technical blog'
+description:      'Android bot @ <a href="http://bizzby.com" target="_blank">BIZZBY</a>.'
 url:              http://hyde.getpoole.com
-baseurl:          /
+baseurl:          http://lgvalle.github.io/hyde/
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Luis G. Valle'
+  twitter:        https://twitter.com/lgvalle
+  gplus:          https://plus.google.com/+LuisGonzálezValle
 
 paginate:         5
 
