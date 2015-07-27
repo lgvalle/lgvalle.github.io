@@ -15,39 +15,39 @@ Situation is like this:
 What you need is a [Network Interceptor][ref1].
 Interceptors are a very powerful mechanism to rewrite calls. After hooking the interceptor to the OkClient every single call will pass through it. That is the perfect moment to attach your AT:
 
-
-    @Override
-    public Response intercept(Chain chain) throws IOException {
-        Request originalRequest = chain.request();
-      
-        // Add authorization header with updated authorization value to intercepted request
-        Request authorisedRequest = originalRequest.newBuilder()
-                .header(AUTHORIZATION, accessToken)
-                .build();
-        return chain.proceed(authorisedRequest);
-    }
-
+```java
+@Override
+public Response intercept(Chain chain) throws IOException {
+   Request originalRequest = chain.request();
+ 
+   // Add authorization header with updated authorization value to intercepted request
+   Request authorisedRequest = originalRequest.newBuilder()
+           .header(AUTHORIZATION, accessToken)
+           .build();
+   return chain.proceed(authorisedRequest);
+}
+```
 
 You can tweak this interceptor to handle edge cases. For example, when your accessToken is empty or when the request already contains an authorization header you may want to skip the rebuild. This can easily be done:
 
 ```java
-    @Override
-    public Response intercept(Chain chain) throws IOException {
-        Request originalRequest = chain.request();
+@Override
+public Response intercept(Chain chain) throws IOException {
+   Request originalRequest = chain.request();
 
-        // Nothing to add to intercepted request if:
-        // a) Authorization value is empty because user is not logged in yet
-        // b) There is already a header with updated Authorization value
-        if (authorizationTokenIsEmpty() || alreadyHasAuthorizationHeader(originalRequest)) {
-            return chain.proceed(originalRequest);
-        }
+   // Nothing to add to intercepted request if:
+   // a) Authorization value is empty because user is not logged in yet
+   // b) There is already a header with updated Authorization value
+   if (authorizationTokenIsEmpty() || alreadyHasAuthorizationHeader(originalRequest)) {
+       return chain.proceed(originalRequest);
+   }
 
-        // Add authorization header with updated authorization value to intercepted request
-        Request authorisedRequest = originalRequest.newBuilder()
-                .header(AUTHORIZATION, authorizationValue)
-                .build();
-        return chain.proceed(authorisedRequest);
-    }
+   // Add authorization header with updated authorization value to intercepted request
+   Request authorisedRequest = originalRequest.newBuilder()
+           .header(AUTHORIZATION, authorizationValue)
+           .build();
+   return chain.proceed(authorisedRequest);
+}
 ```
 
 ##Authenticator: Refreshing Access Token
@@ -64,23 +64,16 @@ This can be accomplish with `Interceptors` as well, but there is a much better w
 When you set up an `Authenticator` `OkHttp` client will **automatically** ask the Authenticator for credentials when a response is `401 Not Authorised` **retrying last failed** request with provied new credentials.
 
 ```java
-public class TokenAuthenticator implements Authenticator {
-    @Override
-    public Request authenticate(Proxy proxy, Response response) throws IOException {
-        // Refresh your access_token using a synchronous api request
-        newAccessToken = service.refreshToken();
+@Override
+public Request authenticate(Proxy proxy, Response response) throws IOException {
+   // Refresh your access_token using a synchronous api request
+   newAccessToken = service.refreshToken();
 
-        // Add new header to rejected request and retry it
-        return response.request().newBuilder()
-                .header(AUTHORIZATION, newAccessToken)
-                .build();
-    }
-
-    @Override
-    public Request authenticateProxy(Proxy proxy, Response response) throws IOException {
-        // Null indicates no attempt to authenticate.
-        return null;
-    }
+   // Add new header to rejected request and retry it
+   return response.request().newBuilder()
+           .header(AUTHORIZATION, newAccessToken)
+           .build();
+}
 ```
 
 ##Setting everything up
