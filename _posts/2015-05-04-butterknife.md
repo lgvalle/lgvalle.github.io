@@ -5,7 +5,7 @@ title: How ButterKnife actually works?
 
 You all know [ButterKnife](http://jakewharton.github.io/butterknife/): the brilliant annotation processing library to bind views and methods for Android by [@JakeWharton](https://twitter.com/JakeWharton)
 
-But, *how does it works*? Most people think by just adding new methods to our classes, saving us a quite a lot of boiler plate code.
+But, *how does it work*? Most people think by just adding new methods to our classes, saving us a quite a lot of boiler plate code.
 
 Well, it’s definitely saving us some code, but you may be surprised to discover that is **not changing our classes at all**.
 
