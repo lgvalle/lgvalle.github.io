@@ -15,7 +15,7 @@ Situation is like this:
 What you need is a [Network Interceptor][ref1].
 Interceptors are a very powerful mechanism to rewrite calls. After hooking the interceptor to the OkClient every single call will pass through it. That is the perfect moment to attach your AT:
 
-```java
+
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request originalRequest = chain.request();
@@ -26,7 +26,7 @@ Interceptors are a very powerful mechanism to rewrite calls. After hooking the i
                 .build();
         return chain.proceed(authorisedRequest);
     }
-```
+
 
 You can tweak this interceptor to handle edge cases. For example, when your accessToken is empty or when the request already contains an authorization header you may want to skip the rebuild. This can easily be done:
 
