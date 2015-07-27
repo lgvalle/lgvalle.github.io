@@ -3,32 +3,41 @@ layout: post
 title: How ButterKnife actually works?
 ---
 
-You all know ButterKnife: the brilliant annotation processing library to bind views and methods for Android.
+You all know [ButterKnife](http://jakewharton.github.io/butterknife/): the brilliant annotation processing library to bind views and methods for Android by [@JakeWharton](https://twitter.com/JakeWharton)
 
-http://jakewharton.github.io/butterknife/
+But, *how does it works*? Most people think by just adding new methods to our classes, saving us a quite a lot of boiler plate code.
 
-But, how it works? Most people think it just add new methods to our classes saving us a quite a lot of boiler plate code. 
+Well, it’s definitely saving us some code, but you may be surprised to discover that is **not changing our classes at all**.
 
-You may be surprised to discover that is not actually happening at all :)
-
-First, you need a quick overview of how annotation processing works in java.
+Want to find out? First, you need a quick overview of how annotation processing works in java.
 
 ##Java Annotation Processing
 
-Annotation processing is a tool build in javac for scanning and processing annotations at compile time.
+> Annotation processing is a tool build in javac for scanning and processing annotations at compile time.
 
-You can define your own annotations and a processor to handle them.
+You can define your own annotations and a custom processor to handle them.
 
   * Annotations are scanned and processed at **compile time**.
 
   * An Annotation Processor reads java code, process its annotations and **generate java code in response**. 
-  * This java code will then be compiled again as a regular java class. 
+  
+  * Generated java code is then compiled again as a regular java class
 
   * An Annotation Processor **can not change** an existing input java class. Neither adding or modifiying methods.
 
+
+###Java Compiler
+
+At [OpenJDK][link2] you can read an excellent overview of how Java compiler works. 
+
+This chart summarizes very well the part that interests us:
+
+![java compiler][image-java-compiler]
+*Java compiling process overview*
+
 ##ButterKnife workflow
 
-When you compile your Android project [ButterKnife Annotations Processor](https://github.com/JakeWharton/butterknife/blob/master/butterknife/src/main/java/butterknife/internal/ButterKnifeProcessor.java) `process` method is executed doing the following:
+When you compile your Android project [ButterKnife Annotations Processor][link1] `process` method is executed, doing the following:
 
   * First, it scans all java classes looking for ButterKnife annotations: `@InjectView`, `@OnClick`, etc.
   
@@ -38,16 +47,14 @@ When you compile your Android project [ButterKnife Annotations Processor](https:
   
   * Finally, during execution, when we call `ButterKnife.inject(this)` each ViewInjector `inject` method is called.
 
-##Java Compiler
-
-At [OpenJDK](http://openjdk.java.net/groups/compiler/doc/compilation-overview/index.html) you can read an excellent overview of how Java compiler works. 
-
-This chart summarizes very well the part that interests us:
 
 
-##ButterKnife Example
 
-For the same sample code you can find at https://github.com/JakeWharton/butterknife
+##Sample
+
+For the sample code you can find at https://github.com/JakeWharton/butterknife example this is what happens underneath:
+
+![butterknife sample][image-view-bind]
 
 > ExampleActivity.java
 
@@ -102,6 +109,23 @@ Then, during execution time, when we call `ButterKnife.bind(this);` what happens
 
   * ButterKnife calls `findViewBinderForClass(ExampleActivity.class)` finding `ExampleActivity$$ViewBinder.java`
   * `ExampleActivity$$ViewBinder.bind()` is executed, finding and casting views and setting them into `ExampleActivity.class` attributes, which are `public`
-  * `onClickListeners` for views are setted as a wrapper to execute target defined method to handle clicks (annotated with `@OnClick`)
+  * `onClickListeners` for views are setted up as a wrapper to execute target defined method to handle clicks (annotated with `@OnClick`)
 
-This is why annotated attributes and methods **must** be public: ButterKnife needs to be able to access them from a separate class.  
+This is why annotated attributes and methods **must** be public: ButterKnife needs to be able to **access them from a separate class**.  
+
+
+##More info
+
+If you want to know more about Java Annotation Processing, this three post help me out a lot when writing this post:
+
+  * [Playing with Java annotation processing][ref1]
+  * [Annotation Processing 101][ref2]
+  * [Java Custom Annotations Example][ref3]
+
+[image-java-compiler]: https://raw.githubusercontent.com/lgvalle/lgvalle.github.io/master/public/images/butterknife-java-compiler.png "How Java compiler works"
+[image-view-bind]: https://raw.githubusercontent.com/lgvalle/lgvalle.github.io/master/public/images/butterknife-viewbind.png "View bind"
+[link1]: https://github.com/JakeWharton/butterknife/blob/master/butterknife/src/main/java/butterknife/internal/ButterKnifeProcessor.java
+[link2]: http://openjdk.java.net/groups/compiler/doc/compilation-overview/index.html
+[ref1]: http://programmaticallyspeaking.com/playing-with-java-annotation-processing.html "Playing with Java annotation processing"
+[ref2]: http://hannesdorfmann.com/annotation-processing/annotationprocessing101/ "Annotation Processing 101"
+[ref3]: http://www.mkyong.com/java/java-custom-annotations-example/ "Java Custom Annotations Example"
