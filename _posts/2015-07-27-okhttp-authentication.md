@@ -3,8 +3,6 @@ layout: post
 title: Token based authentication using Retrofit 1.9 + OkHttp 2.4
 ---
 
-#Token based authentication using Retrofit 1.9 + OkHttp 2.4
-
 Situation is like this: 
 
   1. You got an AccessToken and RefreshToken (AT and RT for now on)
