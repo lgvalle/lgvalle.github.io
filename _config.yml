@@ -9,9 +9,9 @@ relative_permalinks: true
 # Setup
 title:            Luis Valle
 tagline:          'Luis technical blog'
-description:      'Android bot @ <a href="http://bizzby.com" target="_blank">BIZZBY</a>.'
+description:      'Android bot @ <a href="http://bizzby.com" target="_blank">BIZZBY</a>'
 url:              http://lgvalle.github.io/
-baseurl:          http://lgvalle.github.io/
+baseurl:          /
 
 author:
   name:           'Luis G. Valle'
@@ -25,3 +25,8 @@ version:          2.1.0
 
 github:
   repo:           https://github.com/lgvalle
+
+# Social Media Content
+twitter_username: lgvalle
+github_username:  lgvalle
+googleplus_username: +LuisGonz%C3%A1lezValle
