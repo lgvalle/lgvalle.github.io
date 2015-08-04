@@ -71,7 +71,7 @@ public Request authenticate(Proxy proxy, Response response) throws IOException {
 
    // Add new header to rejected request and retry it
    return response.request().newBuilder()
-           .header(AUTHORIZATION, newAccessToken)
+           .addHeader(AUTHORIZATION, newAccessToken)
            .build();
 }
 ```
