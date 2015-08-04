@@ -19,7 +19,7 @@ Mobile apps usually **do very little**. A very high percent of use cases are jus
 
 As a result **business logic is not complex**. At least not as complex as web apps have. Well you have to deal with platform issues: memory, storage, pause, resume, network, location, etc. But that is not your app business logic. You have all of that in every app.
 
-So it seems that most of the apps will not benefit from things like decoupled Interactors with job priority execution queues.
+So it seems that most of the apps out there will not benefit from things like  complex layer divisions or job priority execution queues.
 
 They may just need a **simple way to organise code, work together efficiently and find bugs easily**.
 
