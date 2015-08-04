@@ -164,5 +164,7 @@ I believe Flux is very good for all of that.
 
 [android-app]: https://github.com/lgvalle/android-flux-todo-app
 
+## Thanks
+Special thanks to my colleague [Michele Bertoli](https://twitter.com/MicheleBertoli) for taking the time to introduce me to Flux and for reviewing this post.
 
 
