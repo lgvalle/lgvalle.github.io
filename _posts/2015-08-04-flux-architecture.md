@@ -5,7 +5,7 @@ title: Flux Architecture on Android
 
 Finding a good architecture for Android applications is not easy. Google seems to not care much about it, so there is no official recommendation on patterns beyond Activities lifecycle management.
 
-But defining an architecture for your application is important. Like it or not, **every application is going to have an architecture**. So you'd better be the one defining it then let it just emerge.
+But defining an architecture for your application is important. Like it or not, **every application is going to have an architecture**. So you'd better be the one defining it than let it just emerge.
 
 # Today: Clean Architecture
 
