@@ -17,7 +17,7 @@ Typically **mobile apps live shorter than web apps**. Mobile technology is evolv
 
 Mobile apps usually **do very little**. A very high percent of use cases are just for data consuming. Get data from API, show data to user. Lot of reads, very little writes. 
 
-As a result **business logic is not complex**. At least not as complex as web apps have. Well you have to deal with platform issues: memory, storage, pause, resume, network, location, etc. But that is not your app business logic. You have all of that in every app.
+As a result it's **business logic is not complex**. At least not as complex as backend apps. Well you have to deal with platform issues: memory, storage, pause, resume, network, location, etc. But that is not your app business logic. You have all of that in every app.
 
 So it seems that most of the apps out there will not benefit from things like  complex layer divisions or job priority execution queues.
 
@@ -74,7 +74,7 @@ Action action = new ViewAction("SHOW_USER", data);
 
 ## Stores
 
-This is perhaps the **most difficult** to get Flux concep. 
+This is perhaps the **most difficult** to get Flux concept. 
 
 Also If you have worked with Clean Architecture before it also will be uncomfortable to accept, because Stores will assume responsibilities that were previously separated into different layers.
 
@@ -134,7 +134,7 @@ Some comments about implementation:
 
 # Conclusion
 
-The is **no such thing as the Best Architecture for an Android app**. 
+There is **no such thing as the Best Architecture for an Android app**. 
 There _is_ the Best Architecture for your current app. And it is the one that let you collaborate with your teammates easily, finish the project on time, with quality and as less bugs as possible.
 
 I believe Flux is very good for all of that.
