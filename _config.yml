@@ -10,7 +10,7 @@ relative_permalinks: true
 title:            Luis Valle
 tagline:          'Luis technical blog'
 description:      'Android bot @ <a href="http://bizzby.com" target="_blank">BIZZBY</a>'
-url:              http://lgvalle.github.io/
+url:              http://lgvalle.xyz/
 baseurl:          /
 
 author:
