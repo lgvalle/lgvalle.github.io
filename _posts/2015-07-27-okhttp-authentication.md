@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Token based authentication using Retrofit 1.9 + OkHttp 2.4
+comments: true
+twitter: true 
 ---
 
 Situation is like this: 

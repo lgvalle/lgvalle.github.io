@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Flux Architecture on Android
+comments: true
+twitter: false
 ---
 
 Finding a good architecture for Android applications is not easy. Google seems to not care much about it, so there is no official recommendation on patterns beyond Activities lifecycle management.
@@ -167,4 +169,5 @@ I believe Flux is very good for all of that.
 ## Thanks
 Special thanks to my colleague [Michele Bertoli](https://twitter.com/MicheleBertoli) for taking the time to introduce me to Flux and for reviewing this post.
 
-
+<br/>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="lgvalle.github.io/2015/08/04/flux-architecture/" data-via="lgvalle" data-size="large">Tweet</a>

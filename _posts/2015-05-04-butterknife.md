@@ -1,6 +1,8 @@
 ---
 layout: post
 title: How ButterKnife actually works?
+comments: true
+twitter: false
 ---
 
 You all know [ButterKnife](http://jakewharton.github.io/butterknife/): the brilliant annotation processing library to bind views and methods for Android by [@JakeWharton](https://twitter.com/JakeWharton)
