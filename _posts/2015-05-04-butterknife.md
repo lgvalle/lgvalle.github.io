@@ -131,3 +131,6 @@ If you want to know more about Java Annotation Processing, this three post help 
 [ref1]: http://programmaticallyspeaking.com/playing-with-java-annotation-processing.html "Playing with Java annotation processing"
 [ref2]: http://hannesdorfmann.com/annotation-processing/annotationprocessing101/ "Annotation Processing 101"
 [ref3]: http://www.mkyong.com/java/java-custom-annotations-example/ "Java Custom Annotations Example"
+
+<br/>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="lgvalle.github.io/2015/05/04/butterknife/" data-via="lgvalle" data-size="large">Tweet</a>

@@ -2,7 +2,7 @@
 layout: post
 title: Token based authentication using Retrofit 1.9 + OkHttp 2.4
 comments: true
-twitter: true 
+twitter: false 
 ---
 
 Situation is like this: 
@@ -103,3 +103,7 @@ return restAdapter.create(API.class);
 [ref1]: https://github.com/square/okhttp/wiki/Interceptors#network-interceptors
 [ref2]: http://square.github.io/okhttp/javadoc/com/squareup/okhttp/Authenticator.html
 [ref3]: https://github.com/square/okhttp/wiki/Recipes#handling-authentication
+
+
+<br/>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="lgvalle.github.io/2015/07/27/okhttp-authentication/" data-via="lgvalle" data-size="large">Tweet</a>
