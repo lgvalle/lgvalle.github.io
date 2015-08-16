@@ -106,4 +106,4 @@ return restAdapter.create(API.class);
 
 
 <br/>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="lgvalle.github.io/2015/07/27/okhttp-authentication/" data-via="lgvalle" data-size="large">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lgvalle.github.io/2015/07/27/okhttp-authentication/" data-via="lgvalle" data-size="large">Tweet</a>

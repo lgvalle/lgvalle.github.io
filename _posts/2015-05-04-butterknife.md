@@ -133,4 +133,4 @@ If you want to know more about Java Annotation Processing, this three post help 
 [ref3]: http://www.mkyong.com/java/java-custom-annotations-example/ "Java Custom Annotations Example"
 
 <br/>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="lgvalle.github.io/2015/05/04/butterknife/" data-via="lgvalle" data-size="large">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lgvalle.github.io/2015/05/04/butterknife/" data-via="lgvalle" data-size="large">Tweet</a>

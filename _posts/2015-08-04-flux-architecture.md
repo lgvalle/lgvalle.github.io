@@ -170,4 +170,4 @@ I believe Flux is very good for all of that.
 Special thanks to my colleague [Michele Bertoli](https://twitter.com/MicheleBertoli) for taking the time to introduce me to Flux and for reviewing this post.
 
 <br/>
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="lgvalle.github.io/2015/08/04/flux-architecture/" data-via="lgvalle" data-size="large">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lgvalle.github.io/2015/08/04/flux-architecture/" data-via="lgvalle" data-size="large">Tweet</a>
