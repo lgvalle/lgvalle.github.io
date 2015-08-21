@@ -54,7 +54,7 @@ When you compile your Android project [ButterKnife Annotations Processor][link1]
 
 ##Sample
 
-For the sample code you can find at https://github.com/JakeWharton/butterknife example this is what happens underneath:
+For the sample code you can find at [https://github.com/JakeWharton/butterknife](https://github.com/JakeWharton/butterknife) this is what happens underneath:
 
 ![butterknife sample][image-view-bind]
 
@@ -87,9 +87,9 @@ public class ExampleActivity$$ViewBinder<T extends com.lgvalle.samples.ui.Exampl
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
     view = finder.findRequiredView(source, 2131361865, "field 'user'");
-    target.user = finder.castView(view, 2131361865, "field 'user'");
+    target.username = finder.castView(view, 2131361865, "field 'user'");
     view = finder.findRequiredView(source, 2131361868, "field 'pass'");
-    target.pass = finder.castView(view, 2131361868, "field 'pass'");
+    target.password = finder.castView(view, 2131361868, "field 'pass'");
 
     view = finder.findRequiredView(source, 2131361874, "field 'submit' and method 'submit'");
     view.setOnClickListener(
@@ -101,8 +101,8 @@ public class ExampleActivity$$ViewBinder<T extends com.lgvalle.samples.ui.Exampl
   }
 
   @Override public void reset(T target) {
-    target.user = null;
-    target.pass = null;
+    target.username = null;
+    target.password = null;
   }
 }
 ```
@@ -131,6 +131,7 @@ If you want to know more about Java Annotation Processing, this three post help 
 [ref1]: http://programmaticallyspeaking.com/playing-with-java-annotation-processing.html "Playing with Java annotation processing"
 [ref2]: http://hannesdorfmann.com/annotation-processing/annotationprocessing101/ "Annotation Processing 101"
 [ref3]: http://www.mkyong.com/java/java-custom-annotations-example/ "Java Custom Annotations Example"
+
 
 <br/>
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lgvalle.github.io/2015/05/04/butterknife/" data-via="lgvalle" data-size="large">Tweet</a>
