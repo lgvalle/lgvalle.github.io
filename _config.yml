@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Luis Valle
 tagline:          'Luis technical blog'
-description:      'Android bot @ <a href="http://bizzby.com" target="_blank">BIZZBY</a>'
+description:      'I do Android @ <a href="https://www.novoda.com/" target="_blank">Novoda</a>'
 url:              http://lgvalle.xyz/
 baseurl:          /
 
